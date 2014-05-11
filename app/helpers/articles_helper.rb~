@@ -1,4 +1,5 @@
 module ArticlesHelper
+include ActiveModel::ForbiddenAttributesProtection
 
   def article_params
     params.require(:article).permit(:title, :body)
